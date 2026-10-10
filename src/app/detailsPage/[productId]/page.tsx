@@ -67,7 +67,7 @@ const ProductDetails = async ({params}:DetailsPageProps) => {
           <div>
           <div className="font-bold text-2xl">{productDetailsData.nameBn}</div>
             <div className="font-bold text-[18px] text-zinc-500">প্রতি  {productDetailsData.unit} {productDetailsData.nameBn}</div>
-              <div className="text-[16px] text-black">গত কালের তুলনায় আজ দাম <span className="font-bold">বেড়েছে </span> <span className="text-2xl font-bold"> - {increacedPrice > 0 ? increacedPrice.toLocaleString("bn-BD") : "০"}</span> টাকা</div> 
+              <div className="text-[16px] text-black">গত কালের তুলনায় আজ দাম <span className="font-bold">বেড়েছে </span> <span className="text-2xl font-bold">ㆍ{increacedPrice > 0 ? increacedPrice.toLocaleString("bn-BD") : "০"}</span> টাকা</div> 
           </div>
       </div>
       <div className="flex items-center">

@@ -1,3 +1,4 @@
+import { notFound } from "next/navigation"
 
 type DetailsPageProps  ={
     params : Promise<{ productId: string }>
@@ -11,23 +12,27 @@ type Mrket = {
 const ProductDetails = async ({params}:DetailsPageProps) => {
     
     const { productId } = await params
-    console.log("productId", productId);
+    // console.log("productId", productId);
     
-    const res = await fetch(`https://api.api-store.workers.dev/api/bazardor/products/${productId}`);
+    const res = await fetch(`https://api.abcz.workers.dev/api/bazardor/products/${productId}`);
     const productDetailsData = await res.json(); 
    
-    console.log("productDetailsData",productDetailsData);
+    // console.log("productDetailsData",productDetailsData);
     
+    if(!productDetailsData.markets){
+      notFound()
+    }
+
     const increacedPrice = productDetailsData.today - productDetailsData.yesterday
-   console.log("increacedPrice",increacedPrice);
+  //  console.log("increacedPrice",increacedPrice);
     
     let maxPrice = 0
-     productDetailsData.markets.forEach((item:Mrket)=>{
+     productDetailsData?.markets?.forEach((item:Mrket)=>{
         if(item.max > maxPrice){
             maxPrice = item.max
         }
     })
-     console.log("markets" , maxPrice , productDetailsData.markets);
+    //  console.log("markets" , maxPrice , productDetailsData.markets);
      
     let minPrice = 1000
      productDetailsData.markets.forEach((item:Mrket)=>{
@@ -35,7 +40,7 @@ const ProductDetails = async ({params}:DetailsPageProps) => {
             minPrice = item.min
         }
     })
-     console.log("markets min" , minPrice , productDetailsData.markets);
+    //  console.log("markets min" , minPrice , productDetailsData.markets);
      
       const ArrayOFaverage : number[] = []
       productDetailsData.markets.forEach((item:Mrket)=>{
@@ -44,14 +49,14 @@ const ProductDetails = async ({params}:DetailsPageProps) => {
              
         })
         
-        const averageOFArray = ArrayOFaverage.reduce((current, item)=>current + item ,0);
-        console.log(ArrayOFaverage);
-        console.log("averageOFArray",averageOFArray );
+        // const averageOFArray = ArrayOFaverage.reduce((current, item)=>current + item ,0);
+        // console.log(ArrayOFaverage);
+        // console.log("averageOFArray",averageOFArray );
         const avaragePrice = Math.floor(751 / ArrayOFaverage.length)
      
      return(
         <>
-         <h1>this is productg details page</h1>  
+           
           <div className="mx-auto  pt-5">
 <div className="stats shadow w-[400px] bg-zinc-100 md:w-[700px] lg:w-7xl ">
   <div className="stat flex flex-col gap-5 items-center lg:flex lg:flex-row lg:justify-between">

@@ -16,10 +16,10 @@ interface Product {
 
 const MarqueeComponents = async () => {
       
-    const res = await fetch('https://api.api-store.workers.dev/api/bazardor/products');
+    const res = await fetch('https://api.abcz.workers.dev/api/bazardor/products');
     const data = await res.json()
 
-    console.log("From Marque",data);
+    // console.log("From Marque",data);
     
     return(
         <>
@@ -28,9 +28,9 @@ const MarqueeComponents = async () => {
           {data.map((item :Product, index : number)=>{
             return<Link key={index} href={`/detailsPage/${item.id}`}>
                <div  className="px-4 hover:underline">
-                <span className="pr-1">{item.nameBn}</span>
-                <span className="pr-1">{item.image}</span>
-                <span>{item.today.toLocaleString("bn-BD")} টাকা</span>
+                <span className="pr-1 ">{item.nameBn}</span>
+                <span className="pr-1 ">{item.image}</span>
+                <span className="">{item.today.toLocaleString("bn-BD")} টাকা</span>
                 <span className={item.change.dir=== "up" ? "text-red-500 px-2" : "text-green-600 px-2"}>{item.change.dir=== "up" ? "▼": "▲"}{item.change.pct.toLocaleString("bn-BD")}</span>
             </div> 
             </Link>

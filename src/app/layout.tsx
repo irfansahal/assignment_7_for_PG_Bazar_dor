@@ -4,6 +4,7 @@ import "./globals.css";
 import Navigation from "./components/shared/nav/navigation";
 import MarqueeComponents from "./components/shared/nav/marquee";
 import { ToastContainer } from "react-toastify";
+import Footer from "./components/shared/footer/footer";
 
 const noteSerifBangali = Noto_Serif_Bengali({
   subsets: ["latin", "bengali"],
@@ -24,11 +25,13 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       <body 
       className="min-h-full flex flex-col"
        cz-shortcut-listen="true"
-      >
-         <Navigation/>
+      > 
+            <Navigation/>
          <MarqueeComponents/>
         {children}
+        <Footer/>
         <ToastContainer />
+        
         </body>
     </html>
   );

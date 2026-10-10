@@ -14,7 +14,7 @@ interface Product {
 
 }
 const ProductCard = ({item} : { item : Product}) => {
-  console.log("from cart",item);
+  // console.log("from cart",item);
   
     return(
         <>

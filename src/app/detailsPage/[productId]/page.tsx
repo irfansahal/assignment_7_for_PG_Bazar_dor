@@ -159,9 +159,9 @@ const ProductDetails = async ({params}:DetailsPageProps) => {
         return <tr key={index}>
         <th>{item.market}</th>
         <td>{item.division}</td>
-        <td>{item.min.toLocaleString("bn-BD")}</td>
-        <td>{item.max.toLocaleString("bn-BD")}</td>
-        <td className="font-bold">{Math.floor(((item.max + item.min) / 2)).toLocaleString("bn-BD")}</td>
+        <td>{item.min.toLocaleString("bn-BD")} টাকা</td>
+        <td>{item.max.toLocaleString("bn-BD")} টাকা</td>
+        <td className="font-bold">{Math.floor(((item.max + item.min) / 2)).toLocaleString("bn-BD")} টাকা</td>
       </tr>
        })}
       {/* row 2 */}

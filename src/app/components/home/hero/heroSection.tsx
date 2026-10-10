@@ -24,7 +24,7 @@ const HeroSection =  () => {
       <p className="py-6 text-zinc-500">
        চাল,ডাল,তেল,সবজি,মাছ,মাংস,ডিম ও মসলার দাম - বাজারভিত্তিক বিস্তারিত, গড় ও সর্বনিম্ন-সরবাধিক এবং দামের পরিবর্তন এক জায়গায় 
       </p>
-      <button className="btn btn-success bg-green-700 text-white">সব পণ দেখুন</button>
+      <a href="#products"><button className="btn btn-success bg-green-700 text-white" >সব পণ দেখুন</button></a>
     </div>
   </div>
 </div>

@@ -48,7 +48,7 @@ const MainSection = async () => {
         
         </div>
 
-        <div className=" pt-12 lg:w-7xl lg:mx-auto px-5 lg:px-0">
+        <div className=" pt-12 lg:w-7xl lg:mx-auto px-5 lg:px-0" id="products">
             <h1 className=" font-bold pb-3 text-2xl">সব পণ্য দেখানো হচ্চে </h1>
             <p className="text-zinc-400 font-bold pb-5">মোট {data.length.toLocaleString("bn-BD")} পণ্য দেখানো হচ্চে</p>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7">

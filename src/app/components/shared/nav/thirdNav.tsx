@@ -2,6 +2,7 @@
 
 import Link from 'next/link'
  import { authClient } from '../../../../lib/auth-client'
+import { toast } from 'react-toastify'
 
  const ThirdNav = () => {
     
@@ -9,8 +10,16 @@ import Link from 'next/link'
       const isUserExisting = session?.user 
 
       const logOutHandler = async () => {
-         await authClient.signOut();
-      }
+        const { data :logout , error} = await authClient.signOut();
+       
+        if(error){
+        toast.error("আপনি লগ আউট করতে ব্যর্থ হয়েছেন")
+      } 
+
+      toast.success("আপনি সফল ভাবে লগ আউট করেছেন")
+    }
+
+     
 
     return(
         <>

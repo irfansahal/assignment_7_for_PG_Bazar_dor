@@ -4,7 +4,7 @@ import MainSection from "./components/home/mainSetion/mainSection";
 export default function Home() {
   return (
  <>
- <div className="">
+ <div className="py-5">
   <HeroSection/>
   <MainSection/>
  </div>

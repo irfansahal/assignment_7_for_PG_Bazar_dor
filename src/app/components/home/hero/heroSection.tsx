@@ -9,7 +9,7 @@ const HeroSection =  () => {
 
     return(
         <>
-        <div className="hero bg-base-200 rounded-2xl  lg:w-7xl lg:mx-auto">
+        <div className="hero bg-base-200 rounded-2xl  lg:w-7xl lg:mx-auto ">
   <div className="hero-content flex-col lg:flex-row-reverse">
     <Image
       alt="hero_iamge"

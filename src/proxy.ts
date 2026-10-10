@@ -18,6 +18,6 @@ import { headers } from 'next/headers'
 }
  
 export const config = {
-  matcher: '/detailsPage/:path',
+  matcher: '/detailsPage/:path*',
 }
 export default proxy

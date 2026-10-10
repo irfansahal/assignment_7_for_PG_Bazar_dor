@@ -96,7 +96,7 @@ const SignInPage = () => {
                     </div>
                   </div>
                   <div className="pt-5">
-                    <p>অ্যাকাউন্ট নেই ? <Link href={"/sign-up"}>সাইন আপ করুন</Link></p>
+                    <p>অ্যাকাউন্ট নেই ? <Link href={"/sign-up"} className="text-green-700">সাইন আপ করুন</Link></p>
                   </div>
                 </div>
         </>

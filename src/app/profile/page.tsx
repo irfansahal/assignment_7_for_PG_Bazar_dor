@@ -1,5 +1,6 @@
 "use client"
 
+import Link from "next/link"
 import { authClient } from "../../lib/auth-client" 
 import Image from "next/image"
 
@@ -70,6 +71,7 @@ const Profile = () => {
             </div>
         </div>
     </div>
+    <Link href="/" className='text-green-700 font-bold'><span className='text-4xl pt-4'>⮜── </span> মূল পৃষ্ঠায় ফিরে যান</Link>
     </>
   )
 }

@@ -1,6 +1,7 @@
 
 import CategorySortComponents from "@/app/components/categorySort/categorySortComponents";
 import CategorySort from "@/app/components/categorySort/categorySortComponents";
+import Link from "next/link";
 
 
 type CategoryPageProps  ={

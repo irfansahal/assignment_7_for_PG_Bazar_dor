@@ -9,7 +9,7 @@ import Link from "next/link";
 
 const NavLinks = async () => {
     
-    const res = await fetch('https://api.abcz.workers.dev/api/bazardor/categories');
+    const res = await fetch('https://openapi.programming-hero.com/api/bazardor/categories');
     const data : Category[] = await res.json();
     // console.log(data);
      

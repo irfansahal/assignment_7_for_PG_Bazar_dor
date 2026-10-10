@@ -14,10 +14,10 @@ const CategoryPage = async ({params} :CategoryPageProps) => {
      const { categoryId } = await params
     console.log(categoryId);
     
-    const categoryRes = await fetch(`https://api.abcz.workers.dev/api/bazardor/categories/${categoryId}`)
+    const categoryRes = await fetch(`https://openapi.programming-hero.com/api/bazardor/categories/${categoryId}`)
     const categoryData = await categoryRes.json() 
 
-     const res = await fetch(`https://api.abcz.workers.dev/api/bazardor/products?category=${categoryId}`)
+     const res = await fetch(`https://openapi.programming-hero.com/api/bazardor/products?category=${categoryId}`)
      const data = await res.json();
      console.log(categoryId,data);
      console.log(categoryId,data.length);

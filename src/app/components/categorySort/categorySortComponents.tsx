@@ -59,7 +59,7 @@ const CategorySortComponents = ({data}:{data : Product[]}) => {
         </div>
 
         <div className=" pt-12 lg:w-7xl lg:mx-auto px-5 lg:px-0 pb-20">
-            {data.length > 0 ? <h1 className=" font-bold pb-5 text-2xl">মোট চারটি {data.length.toLocaleString("bn-BD")} টী পন্নের আজকের দাম দেখানো হচ্ছে</h1>: <>
+            {data.length > 0 ? <h1 className=" font-bold pb-5 text-2xl">মোট {data.length.toLocaleString("bn-BD")} টী পন্নের আজকের দাম দেখানো হচ্ছে</h1>: <>
             <h1 className=" font-bold pb-5 text-2xl">আপনি যে ডেটা খুঁজছেন, তা পাওয়া যায়নি।</h1> <Link href="/" className='text-green-700 font-bold'><span className='text-4xl pt-4'>⮜── </span> মূল পৃষ্ঠায় ফিরে যান</Link>
             </> }
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7">

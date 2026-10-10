@@ -3,9 +3,17 @@
 import { toast } from "react-toastify";
 import { authClient } from "../../lib/auth-client";
 import Link from "next/link";
+import { useEffect } from "react";
 
 const SignInPage = () => {
 
+     
+    useEffect(() => {
+  const params = new URLSearchParams(window.location.search);
+  if (params.get("error") === "login-required") {
+    toast.error("আপনি লগ-ইন করেননি। প্রথমে লগ-ইন বা রেজিস্টার করুন।"); // changed
+  }
+}, [])
     
         const submitHandler =async (e:React.SubmitEvent<HTMLElement>) => {
             e.preventDefault(); 
@@ -20,12 +28,12 @@ const SignInPage = () => {
              
             if(data){
                 console.log(data);
-                toast.success("আপনি সফলভাবে রেজিস্ট্রিসন করেছেন")
+                toast.success("আপনি সফলভাবে লগইন করেছেন")
                 //redirect("/")
             }
             if(error){
                 console.log(error)
-                toast.error("আপনি রেজিস্ট্রিসন করতে বেরথ হয়েছেন")
+                toast.error("আপনি লগইন করতে ব্যর্থ  হয়েছেন")
             }        
     }
 
@@ -95,3 +103,4 @@ const SignInPage = () => {
     )
 }
 export default SignInPage
+

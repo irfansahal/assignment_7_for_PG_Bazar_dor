@@ -8,7 +8,8 @@ Technologies used
 5 key features of the project -->
 
 
-# বাজার দর / BazarDor 
+# বাজার দর / BazarDor
+ 
 --- 
 ### short description
 

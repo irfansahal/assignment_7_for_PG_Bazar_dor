@@ -12,8 +12,8 @@ import { headers } from 'next/headers'
     
    const UserExist = session?.user
     
-   if(!UserExist){
-       return NextResponse.redirect(new URL('/sign-in', request.url))
+   if(!UserExist){ 
+       return NextResponse.redirect(new URL('/sign-in?error=login-required', request.url))
    }
 }
  

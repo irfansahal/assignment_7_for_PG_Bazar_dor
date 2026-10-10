@@ -1,36 +1,25 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+<!-- 
+C2. GitHub README
+Add a well-designed README.md that includes:
+Project name 
+(বাজার দর / BazarDor)
+Short description
+Technologies used
+5 key features of the project -->
 
-## Getting Started
 
-First, run the development server:
-
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+# বাজার দর / BazarDor 
+--- 
+### short description
+This is a web application for getting update about "Fresh produce market".If you want to go for buying Fresh produce market products , this application can help you to get idea about what kind of products are available in your nearest market and its price, You also take idea yeasterday price, or is the price increased or not.
+if you have several markets in your area , so this application can guide you for which market you should go on your preference.if you are a seller then this applicition must help you to fixe product price. 
+---
+### Technologies used
+Here so many technologies are used. it is javascript based project that is why here JavaScript , React , Next.js , TypeScript , React Router in Next Js are used. here also tailwind , CSS , Daisyui , Better-authe , MongoDB , Marquee are applied.
+---
+### 5 key features of the project
+1/ Here you can create or register a user data and then you can log in by that data 
+2/ Here you can update a user's information like his name, this features added by better auth.
+3/ You can log in by social authentication like you can log in by google and github 
+4/ You can see the  sorted price for a specific category prduct by doing sorting "from down to up" or "from up to down"
+5/ You can see the detals of a product after completing your registation  

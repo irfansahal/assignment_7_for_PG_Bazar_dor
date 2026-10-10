@@ -17,6 +17,11 @@ const NavLinks = async () => {
 
     return(
         <>
+                <Link href={"/"}>
+                <li>
+                 <span>হোম</span>
+                </li>
+                </Link>
         {data.map((item : Category)=>{
             return <Link href={`/categoryPage/${item.slug}`} key={item.id}>
                 <li>

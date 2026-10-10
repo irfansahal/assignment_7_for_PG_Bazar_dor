@@ -125,7 +125,7 @@ const ProductDetails = async ({params}:DetailsPageProps) => {
       <div className="flex flex-col items-start gap-1">
         <div>গড় দাম</div>
        <div className="text-2xl font-bold text-green-600">{avaragePrice.toLocaleString("bn-BD")} টাকা</div>
-       <div>প্রতি কজি এর হিসাবে</div> 
+       <div>প্রতি {productDetailsData.unit} এর হিসাবে</div> 
        </div>
     </div>
    
